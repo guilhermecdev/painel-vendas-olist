@@ -130,13 +130,13 @@ Como o projeto utiliza apenas tecnologias front-end, não é necessário instala
 ### 1. Clone o repositório
 
 ```bash
-git clone https://github.com/SEU-USUARIO/SEU-REPOSITORIO.git
+git clone https://github.com/guilhermecdev/painel-vendas-olist.git
 ```
 
 ### 2. Entre na pasta
 
 ```bash
-cd SEU-REPOSITORIO
+cd painel-vendas-olist
 ```
 
 ### 3. Abra o projeto
@@ -147,9 +147,19 @@ Basta abrir o arquivo:
 index.html
 ```
 
-no navegador.
+💻 Executando com VS Code
 
-Também é possível utilizar o **Live Server** do VS Code para executar o projeto localmente.
+Caso utilize o Visual Studio Code, também é possível executar o projeto através da extensão Live Server:
+
+Abra a pasta painel-vendas-olist no VS Code;
+
+Abra o arquivo index.html;
+
+Clique com o botão direito no arquivo;
+
+Selecione Open with Live Server.
+
+O dashboard será aberto automaticamente no navegador.
 
 ---
 
