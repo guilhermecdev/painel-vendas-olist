@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Painel de Vendas e Satisfação — Olist</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="wrap">
+<header><div><div class="tag">Análise de e-commerce · Olist · set/2016 a ago/2018</div>
+<h1>Painel de <span>Vendas e Satisfação — Olist</span></h1>
+<p class="sub">Pedidos entregues do marketplace Olist. Use os filtros para recalcular receita, sazonalidade e satisfação por estado, categoria ou forma de pagamento. A última seção mostra como o atraso na entrega se relaciona com a nota.</p></div>
+<div class="badge">● Dados reais · Olist</div></header>
+<div class="card filters">
+<div><label>ESTADO</label><select id="fs"></select></div>
+<div><label>CATEGORIA</label><select id="fc"></select></div>
+<div><label>PAGAMENTO</label><select id="fp"></select></div>
+<span class="cnt" id="cnt"></span><button id="clr">Limpar filtros</button></div>
+<div class="kpis">
+<div class="card kpi" style="--c:#7c5cff"><small>PEDIDOS ENTREGUES</small><span class="ks">com avaliação registrada</span><b id="k1"></b></div>
+<div class="card kpi" style="--c:#22d3c5"><small>RECEITA TOTAL</small><span class="ks">soma dos produtos, sem frete</span><b id="k2"></b></div>
+<div class="card kpi" style="--c:#b8a9ff"><small>TICKET MÉDIO</small><span class="ks">receita ÷ pedidos</span><b id="k3"></b></div>
+<div class="card kpi" style="--c:#ff5c6c"><small>NOTA MÉDIA</small><span class="ks">média das avaliações por pedido</span><b id="k4"></b></div></div>
+<div class="card"><h3>Pedidos por mês</h3><div class="hint">Volume de pedidos entregues no período filtrado</div><div class="box big"><div id="c1"></div></div></div>
+<div class="grid">
+<div class="card"><h3>Receita por categoria</h3><div class="hint">Top 8 categorias, em R$ (preço dos produtos)</div><div class="box"><div id="c2"></div></div></div>
+<div class="card"><h3>Receita por estado</h3><div class="hint">Top 6 estados, em R$ (preço dos produtos)</div><div class="box"><div id="c3"></div></div></div>
+<div class="card"><h3>Forma de pagamento</h3><div class="hint">% dos pedidos, pela forma de pagamento principal</div><div class="box"><div id="c4"></div></div></div></div>
+<h2 class="sec">O que está derrubando a avaliação?</h2><div class="hint">Relação entre atraso na entrega e nota. É uma associação observada nos dados, não prova de causa.</div>
+<div class="g2">
+<div class="card"><h3>Nota média x % de pedidos atrasados</h3><div class="hint">Por mês de compra · meses com poucos pedidos omitidos · roxo = nota (esq.), vermelho = % atrasados (dir.)</div><div class="box" id="c5"></div></div>
+<div class="card"><h3>Nota média por atraso na entrega</h3><div class="hint">Entrega real vs. data estimada</div><div class="box" id="c6"></div></div></div>
+<div class="g2">
+<div class="card"><h3>Categorias com pior nota</h3><div class="hint">Nota média (mínimo de pedidos para entrar)</div><div class="box" id="c7"></div></div>
+<div class="card ins"><h3>Leitura automática</h3><div class="hint">Recalculada conforme os filtros</div><ul id="ins"></ul></div></div>
+<div class="foot"><b>Fonte:</b> Brazilian E-Commerce Public Dataset by Olist (Kaggle), uso não comercial. <b>Critérios:</b> pedidos com status "delivered", com data de entrega e ao menos uma avaliação; mês pela data da compra; receita = soma dos preços dos produtos (sem frete); atraso = entrega real menos data estimada. <b>Observação:</b> set/2016 e dez/2016 têm 1 pedido cada e nov/2016 não tem pedidos entregues, por isso o início do período é quase zerado.</div>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/charts.js"></script>
+<script src="js/filters.js"></script>
+<script src="js/dashboard.js"></script>
+</body>
+</html>
